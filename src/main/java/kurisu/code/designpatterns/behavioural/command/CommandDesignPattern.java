@@ -9,6 +9,8 @@ import kurisu.code.designpatterns.behavioural.command.framework.CommandInterface
  * Helps to decouple de Invoker from the Receiver.
  * 
  * Acts as a middle ware to execute some action. 
+ * 
+ * Check out the composite command to pack a bunch of these into a single one!!
  */
 public class CommandDesignPattern {
     
@@ -17,5 +19,11 @@ public class CommandDesignPattern {
         CommandInterface command = new AddCustomerCommand(service);
         Button button = new Button(command);
         button.click();
+
+        CompositeCommand comp = new CompositeCommand();
+        System.out.println("----------- Executing composite command: ---------");
+        comp.add(new MonochromeCommand());
+        comp.add(new ResizeCommand());
+        comp.execute();
     }
 }
