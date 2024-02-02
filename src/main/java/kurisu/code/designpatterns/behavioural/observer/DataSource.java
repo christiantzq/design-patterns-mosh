@@ -1,7 +1,6 @@
 package kurisu.code.designpatterns.behavioural.observer;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public class DataSource extends Subject {
 
