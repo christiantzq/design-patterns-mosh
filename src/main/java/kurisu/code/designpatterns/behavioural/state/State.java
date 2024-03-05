@@ -1,4 +1,4 @@
-package kurisu.code.designpatterns.behavioural;
+package kurisu.code.designpatterns.behavioural.state;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,8 +6,8 @@ import lombok.Setter;
 /**
  * State Design Pattern 
  * 
- * Uses polimorphism to make a tool behave differently con the same actions, in 
- * this case when using the mouse insice a canvas.
+ * Uses polimorphism to make a tool behave differently on the same actions, in 
+ * this case when using the mouse inside a canvas.
  * 
  * Open Closed Principle, 
  *  - The class should be Open for extension
@@ -15,25 +15,28 @@ import lombok.Setter;
  */
 public class State {
 
-    public void test() {
+    public static void main(String[] args) {
         Canvas canvas = new Canvas();
-
+    
         canvas.setSelectedTool(new Brush());
         canvas.mouseDown();
         canvas.mouseUp();
-
+    
         canvas.setSelectedTool(new Eraser());
         canvas.mouseDown();
         canvas.mouseUp();
+        
     }
     
 }
 
 /**
- * Implementation of a Canvas in a graphic design app.
+ * Canvas View
+ * 
+ * A Canvas in a graphic design app.
  */
 class Canvas{
-    @Getter @Setter private ClickableUITool selectedTool;
+    @Setter private UiTool selectedTool;
 
     public void mouseDown() {
         selectedTool.mouseDown();
@@ -45,18 +48,24 @@ class Canvas{
 }
 
 /**
- *  Interface for a tool that is able to use the mouse inside the Canvas
+ * Base Interface
+ * 
+ * Used by any tools able to use the mouse inside the Canvas.
+ * 
+ * It defines behaviour for when mouse button us pressed or released.
  */
-interface ClickableUITool {
+interface UiTool {
     void mouseDown();
     void mouseUp();
 }
 
 
 /**
- * An Implementation of a specific tool for the canvas
+ * Brush class
+ * 
+ * A concrete implementation of a UI tool.
  */
-class Brush implements ClickableUITool {
+class Brush implements UiTool {
 
     @Override
     public void mouseDown() {
@@ -70,10 +79,13 @@ class Brush implements ClickableUITool {
 
 }
 
+
 /**
- * An Implementation of a specific tool for the canvas
+ * Eraser class
+ * 
+ * A concrete implementation of a UI tool.
  */
-class Eraser implements ClickableUITool {
+class Eraser implements UiTool {
 
     @Override
     public void mouseDown() {
