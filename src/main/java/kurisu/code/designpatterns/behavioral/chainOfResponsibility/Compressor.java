@@ -1,5 +1,8 @@
-package kurisu.code.designpatterns.behavioral.chainOfResponsability;
+package kurisu.code.designpatterns.behavioral.chainOfResponsibility;
 
+/**
+ * Concrete Handler
+ */
 public class Compressor extends Handler {
 
     public Compressor(Handler next) {
@@ -7,7 +10,7 @@ public class Compressor extends Handler {
     }
 
     @Override
-    public boolean doHandle(HttpRequest request) {
+    public boolean concreteHandle(HttpRequest request) {
         System.out.println("Compress.");
         return false; // FALSE = we're not done processing
     }

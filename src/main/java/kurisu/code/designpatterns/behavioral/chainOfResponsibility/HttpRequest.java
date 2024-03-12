@@ -1,8 +1,14 @@
-package kurisu.code.designpatterns.behavioral.chainOfResponsability;
+package kurisu.code.designpatterns.behavioral.chainOfResponsibility;
 
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Request Payload
+ * 
+ * This is defined in the Abstract Handler, therefore will be available to all
+ * concrete Handlers.
+ */
 public class HttpRequest {
     @Setter @Getter private String username;
     @Setter @Getter private String password;
@@ -11,8 +17,4 @@ public class HttpRequest {
         this.username = username;
         this.password = password;
     }
-
-
-
-    
 }

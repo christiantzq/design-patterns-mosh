@@ -1,4 +1,4 @@
-package kurisu.code.designpatterns.behavioral.chainOfResponsability;
+package kurisu.code.designpatterns.behavioral.chainOfResponsibility;
 
 public class WebServer {
     private Handler handler;

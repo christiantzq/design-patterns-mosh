@@ -1,5 +1,8 @@
-package kurisu.code.designpatterns.behavioral.chainOfResponsability;
+package kurisu.code.designpatterns.behavioral.chainOfResponsibility;
 
+/**
+ * Abstract Handler
+ */
 public abstract class Handler {
     private Handler next;
 
@@ -8,7 +11,7 @@ public abstract class Handler {
     }
 
     public void handle(HttpRequest request){
-        if(doHandle(request))
+        if(concreteHandle(request))
             return;
 
         if(next != null){
@@ -16,6 +19,6 @@ public abstract class Handler {
         }
     }
     
-    public abstract boolean doHandle(HttpRequest request);
+    public abstract boolean concreteHandle(HttpRequest request);
     
 }
