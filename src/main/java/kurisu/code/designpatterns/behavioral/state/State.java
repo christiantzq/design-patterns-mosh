@@ -1,17 +1,24 @@
 package kurisu.code.designpatterns.behavioral.state;
 
-import lombok.Getter;
 import lombok.Setter;
 
 /**
- * State Design Pattern 
+ * State Design Pattern
  * 
- * Uses polimorphism to make a tool behave differently on the same actions, in 
- * this case when using the mouse inside a canvas.
+ * Uses polymorphism to make an object behave differently on the same actions but different state.
+ * Its like a Finite-State Machine and not to be confused with the Strategy pattern.
  * 
- * Open Closed Principle, 
- *  - The class should be Open for extension
- *  - The class should be Closed for modification
+ * State                                      vs     Strategy
+ * - States can be dependent as you can              - Strategies are completely independent
+ * easily jump from one state to another.            and unaware of each other.
+ * - The State pattern is about doing                - The Strategy pattern is really about
+ * different things based on the state,              about having different implementations that
+ * hence the result may vary.                        accomplish the same thing.
+ * 
+ * A switch can change the state of our program. These switching rules called transitions 
+ * are finite and predetermined.
+ * 
+ * In this case when using the mouse inside a canvas.
  */
 public class State {
 
@@ -52,7 +59,7 @@ class Canvas{
  * 
  * Used by any tools able to use the mouse inside the Canvas.
  * 
- * It defines behaviour for when mouse button us pressed or released.
+ * It defines behavior for when mouse button us pressed or released.
  */
 interface UiTool {
     void mouseDown();
@@ -89,12 +96,12 @@ class Eraser implements UiTool {
 
     @Override
     public void mouseDown() {
-        System.out.println("Start erasing somethigin inside the canvas.");
+        System.out.println("Start erasing something inside the canvas.");
     }
 
     @Override
     public void mouseUp() {
-        System.out.println("Stop erasing somethigin inside the canvas.");
+        System.out.println("Stop erasing something inside the canvas.");
     }
 
 }

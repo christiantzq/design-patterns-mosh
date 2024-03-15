@@ -3,12 +3,12 @@ package kurisu.code.designpatterns.behavioral.memento;
 /**
  * Memento Design Pattern (AKA the Snapshot)
  * 
- * Memento lets you save and restore the previous state of
+ * Allows you to save and restore the previous state of
  * an object without revealing the details of its implementation.
  * 
  * Originator -> What you want to save
  * 
- * Memento -> A Snapshot in time of the Originator (Unmutable copy)
+ * Memento -> A Snapshot in time of the Originator (Un-mutable copy)
  * 
  * History -> A stack of snapshots, to be used as an "undo".
  * 
