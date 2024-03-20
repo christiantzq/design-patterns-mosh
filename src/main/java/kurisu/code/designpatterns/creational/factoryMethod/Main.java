@@ -1,4 +1,4 @@
-package kurisu.code.designpatterns.creational.factory;
+package kurisu.code.designpatterns.creational.factoryMethod;
 
 /**
  * Factory design pattern

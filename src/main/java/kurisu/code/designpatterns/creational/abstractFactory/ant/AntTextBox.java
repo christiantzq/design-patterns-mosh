@@ -1,6 +1,6 @@
-package kurisu.code.designpatterns.creational.abstractfactory.ant;
+package kurisu.code.designpatterns.creational.abstractFactory.ant;
 
-import kurisu.code.designpatterns.creational.abstractfactory.TextBox;
+import kurisu.code.designpatterns.creational.abstractFactory.TextBox;
 
 public class AntTextBox implements TextBox {
 

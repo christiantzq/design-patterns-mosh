@@ -1,6 +1,6 @@
-package kurisu.code.designpatterns.creational.abstractfactory.material;
+package kurisu.code.designpatterns.creational.abstractFactory.material;
 
-import kurisu.code.designpatterns.creational.abstractfactory.TextBox;
+import kurisu.code.designpatterns.creational.abstractFactory.TextBox;
 
 public class MaterialTextBox implements TextBox {
 

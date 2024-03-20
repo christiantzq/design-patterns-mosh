@@ -1,9 +1,9 @@
 package kurisu.code.designpatterns.behavioral.command;
 
 /**
- * Receiver Class
+ * Receiver
  * 
- * This is the one that actually does the work (business logic)
+ * This is the one that actually does the work (API / business logic)
  */
 public class Robot {
 

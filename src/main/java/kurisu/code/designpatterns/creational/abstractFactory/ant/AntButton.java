@@ -1,6 +1,6 @@
-package kurisu.code.designpatterns.creational.abstractfactory.ant;
+package kurisu.code.designpatterns.creational.abstractFactory.ant;
 
-import kurisu.code.designpatterns.creational.abstractfactory.Button;
+import kurisu.code.designpatterns.creational.abstractFactory.Button;
 
 public class AntButton implements Button {
 

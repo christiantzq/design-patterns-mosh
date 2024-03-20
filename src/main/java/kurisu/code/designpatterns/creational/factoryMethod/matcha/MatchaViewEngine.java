@@ -1,4 +1,4 @@
-package kurisu.code.designpatterns.creational.factory.matcha;
+package kurisu.code.designpatterns.creational.factoryMethod.matcha;
 
 import java.util.Map;
 

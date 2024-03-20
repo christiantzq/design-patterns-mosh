@@ -1,10 +1,10 @@
-package kurisu.code.designpatterns.creational.factory;
+package kurisu.code.designpatterns.creational.factoryMethod;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import kurisu.code.designpatterns.creational.factory.matcha.Controller;
-import kurisu.code.designpatterns.creational.factory.sharp.SharpController;
+import kurisu.code.designpatterns.creational.factoryMethod.matcha.Controller;
+import kurisu.code.designpatterns.creational.factoryMethod.sharp.SharpController;
 
 // public class ProductsController extends Controller { // <- Default
 public class ProductsController extends SharpController { // <- Override via factory

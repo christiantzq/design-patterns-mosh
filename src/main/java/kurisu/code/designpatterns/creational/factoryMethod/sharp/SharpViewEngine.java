@@ -1,8 +1,8 @@
-package kurisu.code.designpatterns.creational.factory.sharp;
+package kurisu.code.designpatterns.creational.factoryMethod.sharp;
 
 import java.util.Map;
 
-import kurisu.code.designpatterns.creational.factory.matcha.ViewEngine;
+import kurisu.code.designpatterns.creational.factoryMethod.matcha.ViewEngine;
 
 public class SharpViewEngine implements ViewEngine{
 
