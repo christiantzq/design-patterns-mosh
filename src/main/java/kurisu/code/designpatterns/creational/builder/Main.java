@@ -1,5 +1,13 @@
 package kurisu.code.designpatterns.creational.builder;
 
+/**
+ * Builder Pattern
+ * 
+ * Allows you to produce different types and representation of an object 
+ * using the same construction process.
+ * 
+ * For Example, to create a car
+ */
 public class Main {
     public static void main(String[] args) {
         Presentation presentation = new Presentation();
